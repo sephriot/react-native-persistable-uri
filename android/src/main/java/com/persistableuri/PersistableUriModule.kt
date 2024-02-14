@@ -3,6 +3,7 @@ package com.persistableuri
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import android.content.ContentResolver
 import com.facebook.react.bridge.BaseActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
@@ -57,7 +58,13 @@ class PersistableUriModule(reactContext: ReactApplicationContext) :
                     promise.resolve(null)
                   } else {
                     val uri: Uri? = data.getData()
-                    promise.resolve(uri?.toString())
+                    if (uri == null) {
+                      promise.reject("SELECT_FAILED", "No data found.")
+                      return
+                    }
+                    val resolver: ContentResolver = reactContext.getContentResolver();
+                    resolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    promise.resolve(uri.toString())
                   }
                 } else {
                   promise.reject("SELECT_CANCELLED", resultCode.toString())

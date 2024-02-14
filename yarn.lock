@@ -3059,7 +3059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sephriot/react-native-persistable-uri@0.1.1, @sephriot/react-native-persistable-uri@workspace:.":
+"@sephriot/react-native-persistable-uri@0.1.2, @sephriot/react-native-persistable-uri@workspace:.":
   version: 0.0.0-use.local
   resolution: "@sephriot/react-native-persistable-uri@workspace:."
   dependencies:
@@ -12127,7 +12127,7 @@ __metadata:
     "@react-native/babel-preset": 0.73.19
     "@react-native/metro-config": 0.73.3
     "@react-native/typescript-config": 0.73.1
-    "@sephriot/react-native-persistable-uri": 0.1.1
+    "@sephriot/react-native-persistable-uri": 0.1.2
     babel-plugin-module-resolver: ^5.0.0
     pod-install: ^0.1.0
     react: 18.2.0
