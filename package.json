@@ -1,6 +1,6 @@
 {
   "name": "@sephriot/react-native-persistable-uri",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Persistable URI file open Intent",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
