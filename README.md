@@ -5,17 +5,17 @@ Persistable URI file open Intent
 ## Installation
 
 ```sh
-npm install react-native-persistable-uri
+npm install @sephriot/react-native-persistable-uri
 ```
 
 ## Usage
 
 ```js
-import { selectDocument } from 'react-native-persistable-uri';
+import { selectDocument } from '@sephriot/react-native-persistable-uri';
 
 // ...
 
-const result = await selectDocument('*/*.wav');
+const result = await selectDocument('audio/*');
 ```
 
 ## Contributing

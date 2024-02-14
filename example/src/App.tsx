@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { selectDocument } from 'react-native-persistable-uri';
+import { selectDocument } from '@sephriot/react-native-persistable-uri';
 
 export default function App() {
   const [result, setResult] = React.useState<string | undefined>();
@@ -10,7 +10,7 @@ export default function App() {
     <View style={styles.container}>
       <Text
         style={{ marginBottom: 20 }}
-        onPress={() => selectDocument('*/*.wav').then(setResult)}
+        onPress={() => selectDocument('audio/*').then(setResult)}
       >
         SELECT!
       </Text>
